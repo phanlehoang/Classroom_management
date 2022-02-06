@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_tree_giangduong" model="ir.ui.view">
+            <field name="name">Giangduong</field>
+            <field name="model">giang.duong</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="code_classroom"/>
+                    <field name="type_class"/>
+                    <field name="classroom"/>
+                    <field name="type_classroom"/>
+                    <field name="activate"/>
+                    <field name="capacity"/>
+                    <field name="lecturer"/>
+                    <field name="start"/>
+                    <field name="end"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_kanban_giangduong" model="ir.ui.view">
+            <field name="name">Giangduong Kanban</field>
+            <field name="model">giang.duong</field>
+            <field name="arch" type="xml">
+                <kanban>
+                    <field name="name"/>
+                    <field name="code_classroom"/>
+                    <field name="classroom"/>
+                    <field name="type_classroom"/>
+                    <field name="capacity"/>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div class="oe_kanban_global_click">
+                                <div>
+                                    <strong class="o_kanban_record_title">
+                                        <field name="name"/>
+                                    </strong>
+                                    <div class="o_kanban_tags_section"/>
+                                    <ul>
+                                        <li>Mã giảng đường:
+                                            <field name="code_classroom"/>
+                                        </li>
+                                        <li>Tiết học:
+                                            <field name="type_class"/>
+                                        </li>
+                                        <li>Phòng:
+                                            <field name="classroom"/>
+                                        </li>
+                                        <li>Loại giảng đường:
+                                            <field name="type_classroom"/>
+                                        </li>
+                                        <li>Trạng thái sử dụng:
+                                            <field name="activate"/>
+                                        </li>
+                                        <li>Số lượng chỗ:
+                                            <field name="capacity"/>
+                                        </li>
+                                        <li>Giảng viên:
+                                                                                        <field name="lecturer"/>
+                                        </li>
+                                        <li>Thời gian bắt đầu:
+                                            <field name="start"/>
+                                        </li>
+                                        <li>Thời gian kết thúc:
+                                            <field name="end"/>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+    </data>
+</odoo>

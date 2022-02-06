@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- actions opening views on models -->
+
+        <record model="ir.actions.act_window" id="giang_duong">
+            <field name="name">Danh sách giảng đường</field>
+            <field name="res_model">giang.duong</field>
+            <field name="view_mode">tree,form,kanban</field>
+        </record>
+
+        <record model="ir.actions.act_window" id="giang_vien">
+            <field name="name">Danh sách giảng viên</field>
+            <field name="res_model">giang.vien</field>
+            <field name="view_mode">tree,form,kanban</field>
+        </record>
+
+        <record model="ir.actions.act_window" id="khoa">
+            <field name="name">Danh sách khoa</field>
+            <field name="res_model">khoa</field>
+            <field name="view_mode">tree,form,kanban</field>
+        </record>
+
+        <!-- Top menu item -->
+        <menuitem name="Quản lý giảng đường" id="menu_root"/>
+
+        <!-- menu book -->
+        <menuitem name="Danh sách giảng đường" id="menu_1_list" parent="menu_root" action="giang_duong"/>
+        <menuitem name="Giảng viên" id="menu_2_list" parent="menu_root" action="giang_vien"/>
+        <menuitem name="Khoa" id="menu_3_list" parent="menu_root" action="khoa"/>
+    </data>
+</odoo>

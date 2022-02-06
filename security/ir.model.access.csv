@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_giang_duong,Access GD,model_giang_duong,,1,1,1,1
+access_giang_vien,Access GV,model_giang_vien,,1,1,1,1
+access_khoa,Access K,model_khoa,,1,1,1,1

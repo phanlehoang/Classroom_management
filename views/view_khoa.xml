@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_tree_khoa" model="ir.ui.view">
+            <field name="name">Khoa</field>
+            <field name="model">khoa</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="code_department"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_kanban_khoa" model="ir.ui.view">
+            <field name="name">Khoa Kanban</field>
+            <field name="model">khoa</field>
+            <field name="arch" type="xml">
+                <kanban>
+                    <field name="name"/>
+                    <field name="code_department"/>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div class="oe_kanban_global_click">
+                                <div>
+                                    <strong class="o_kanban_record_title">
+                                        <field name="name"/>
+                                    </strong>
+                                    <div class="o_kanban_tags_section"/>
+                                    <ul>
+                                        <li>Tên khoa:
+                                            <field name="name"/>
+                                        </li>
+                                        <li>Mã khoa:
+                                            <field name="code_department"/>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+    </data>
+</odoo>
